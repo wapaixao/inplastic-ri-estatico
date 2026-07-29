@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InPlastic — RI / Resultados Gerenciais</title>
+  <style>
+    :root{
+      --blue:#0b1f3a; --blue2:#163b66; --gold:#d6a638; --green:#dff0df; --yellow:#fff3bf;
+      --bg:#f5f7fb; --text:#172033; --muted:#65758b; --danger:#b42318; --line:#d8dee9;
+    }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    header{background:linear-gradient(135deg,var(--blue),var(--blue2));color:white;padding:24px 28px;border-bottom:5px solid var(--gold)}
+    header .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#c9d6e8} h1{margin:6px 0 4px;font-size:28px} header p{margin:0;color:#d8e4f4}
+    main{padding:18px 22px 40px;max-width:1480px;margin:auto}.toolbar{position:sticky;top:0;z-index:10;background:rgba(245,247,251,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 0;margin-bottom:16px}
+    .bar{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.label{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-right:2px}.chip{border:1px solid var(--line);background:white;color:var(--blue);border-radius:999px;padding:8px 12px;font-weight:700;cursor:pointer}.chip.active{background:var(--blue);color:white;border-color:var(--gold);box-shadow:0 0 0 2px rgba(214,166,56,.22)}
+    .cards{display:grid;grid-template-columns:repeat(4,minmax(180px,1fr));gap:14px;margin:16px 0}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(11,31,58,.05)}.card .k{color:var(--muted);font-size:13px}.card .v{font-size:24px;font-weight:800;margin-top:8px}.neg{color:var(--danger)!important}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.tab{border:0;background:#e8edf5;color:var(--blue);border-radius:10px;padding:11px 14px;font-weight:800;cursor:pointer}.tab.active{background:var(--blue);color:white}
+    section.panel{display:none;background:white;border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 8px 24px rgba(11,31,58,.05)}section.panel.active{display:block}.panel h2{font-size:18px;margin:6px 4px 12px}.note{background:#fffbea;border:1px solid #f1d986;border-radius:12px;padding:12px 14px;color:#5b4a12;margin:12px 0}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px;max-height:68vh;background:white}table{border-collapse:separate;border-spacing:0;width:100%;font-size:13px;min-width:920px}th{position:sticky;top:0;background:var(--blue);color:white;z-index:2;padding:9px;border-right:1px solid #294b73;text-align:right}th:first-child{text-align:left;left:0;z-index:3}td{padding:8px 9px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}td:first-child{position:sticky;left:0;background:white;text-align:left;font-weight:600;z-index:1;min-width:280px}.level1 td{background:var(--green);font-weight:900}.level1 td:first-child{background:var(--green)}.level2 td{background:#f8fbf8;font-weight:700}.level3 td:first-child{padding-left:26px;color:#31445f}.hidden-col{display:none}.small{font-size:12px;color:var(--muted)}footer{margin-top:22px;color:var(--muted);font-size:12px}.source-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}.source{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fbfcff}.source b{display:block;margin-bottom:5px}
+    @media(max-width:850px){.cards{grid-template-columns:1fr}.bar{align-items:flex-start}.card .v{font-size:20px}main{padding:12px}.table-wrap{max-height:70vh}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">RI / Resultados Gerenciais</div>
+  <h1>InPlastic — Painel Financeiro</h1>
+  <p>BP e DRE consolidados do Grupo InPlastic — prévia técnica a partir dos balancetes de dezembro/2025.</p>
+</header>
+<main>
+  <div class="toolbar">
+    <div class="bar" id="companyChips"><span class="label">Empresas</span></div>
+  </div>
+
+  <div class="cards" id="cards"></div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="bp">Balanço Patrimonial</button>
+    <button class="tab" data-tab="dre">DRE / Resultado</button>
+    <button class="tab" data-tab="fontes">Fontes e validação</button>
+  </div>
+
+  <section class="panel active" id="bp"><h2>Balanço Patrimonial</h2><div class="table-wrap" id="bpTable"></div></section>
+  <section class="panel" id="dre"><h2>DRE / Resultado</h2><div class="table-wrap" id="dreTable"></div></section>
+  <section class="panel" id="fontes"><h2>Fontes e validação</h2><div class="note" id="notice"></div><div id="sources"></div></section>
+
+  <footer id="footer"></footer>
+</main>
+<script>
+const BRL = new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'});
+const PCT = new Intl.NumberFormat('pt-BR',{style:'percent',minimumFractionDigits:1,maximumFractionDigits:1});
+let DATA, selected = new Set();
+const colsBase = ['Descrição'];
+function fmt(v, key=''){
+  if(v===null || v===undefined || v==='') return '—';
+  if(typeof v === 'number'){
+    if(key.includes('%')) return PCT.format(v);
+    return BRL.format(v);
+  }
+  return String(v);
+}
+function rowClass(r){ const n=Number(r['Nível']||0); return n===1?'level1':n===2?'level2':n>=3?'level3':''; }
+function visibleColumns(extraPct=false){
+  const cols=['Descrição'];
+  DATA.companies.forEach(c=>{ if(selected.has(c)) cols.push(c); });
+  cols.push('Total Grupo');
+  if(extraPct) cols.push('% Receita Líquida Grupo');
+  return cols;
+}
+function table(records, target, extraPct=false){
+  const cols=visibleColumns(extraPct);
+  let html='<table><thead><tr>'+cols.map(c=>`<th>${c}</th>`).join('')+'</tr></thead><tbody>';
+  for(const r of records){
+    html += `<tr class="${rowClass(r)}">`+cols.map(c=>{
+      const value=fmt(r[c], c); const neg=(typeof r[c]==='number' && r[c]<0)?' class="neg"':'';
+      return `<td${neg}>${value}</td>`;
+    }).join('')+'</tr>';
+  }
+  html+='</tbody></table>'; document.getElementById(target).innerHTML=html;
+}
+function renderCards(){
+  document.getElementById('cards').innerHTML = DATA.cards.map(c=>{
+    const neg=c.value<0?' neg':''; return `<div class="card"><div class="k">${c.label}</div><div class="v${neg}">${BRL.format(c.value)}</div></div>`;
+  }).join('');
+}
+function renderChips(){
+  const el=document.getElementById('companyChips');
+  el.innerHTML='<span class="label">Empresas</span><button class="chip active" data-company="__all">Todas</button>'+DATA.companies.map(c=>`<button class="chip active" data-company="${c}">${c}</button>`).join('');
+  el.querySelectorAll('.chip').forEach(btn=>btn.addEventListener('click',()=>{
+    const c=btn.dataset.company;
+    if(c==='__all') { selected=new Set(DATA.companies); }
+    else { selected.has(c)?selected.delete(c):selected.add(c); if(selected.size===0) selected.add(c); }
+    el.querySelectorAll('.chip').forEach(b=>{ const bc=b.dataset.company; b.classList.toggle('active', bc==='__all'? selected.size===DATA.companies.length : selected.has(bc)); });
+    table(DATA.bp,'bpTable'); table(DATA.dre,'dreTable',true);
+  }));
+}
+function renderSources(){
+  document.getElementById('notice').textContent = DATA.meta.notice + ' ' + DATA.meta.scope_note;
+  document.getElementById('sources').innerHTML = '<div class="source-grid">'+DATA.inventory.map(x=>`<div class="source"><b>${x.Empresa} — ${x['Tipo usado']}</b><span class="small">${x.Arquivo}</span><br><span class="small">Linhas extraídas: ${x['Linhas extraídas']}</span></div>`).join('')+'</div>';
+}
+fetch('data.json').then(r=>r.json()).then(d=>{
+  DATA=d; selected=new Set(DATA.companies); renderChips(); renderCards(); renderSources(); table(DATA.bp,'bpTable'); table(DATA.dre,'dreTable',true);
+  document.getElementById('footer').textContent = `Gerado em ${new Date(DATA.meta.generated_at).toLocaleString('pt-BR')} • Fonte: ${DATA.meta.source_file}`;
+});
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab,.panel').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); document.getElementById(b.dataset.tab).classList.add('active');
+}));
+</script>
+</body>
+</html>

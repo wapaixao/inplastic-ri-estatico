@@ -1,0 +1,494 @@
+{
+  "meta": {
+    "title": "InPlastic — RI / Resultados Gerenciais",
+    "group": "Grupo InPlastic",
+    "period": "Dezembro/2025",
+    "source_file": "/root/data/clientes/grupo-inplastic/apresentacao/Grupo_Inplastic_BP_DRE_2025_PREVIA_BALANCETES.xlsx",
+    "generated_at": "2026-07-29T11:23:50.254803+00:00",
+    "notice": "Prévia automática a partir de PDFs de balancete. Revisar contas críticas e eventuais eliminações intercompany antes de uso externo.",
+    "scope_note": "Este site não inclui PIS/COFINS nem módulo de Lucros/Distribuição para este grupo."
+  },
+  "companies": [
+    "Inplastic",
+    "Taoplast",
+    "Licitaplas",
+    "Plas Capital"
+  ],
+  "cards": [
+    {
+      "label": "Ativo total grupo",
+      "value": 9627784.649999999,
+      "kind": "currency"
+    },
+    {
+      "label": "Passivo total grupo",
+      "value": 0.0,
+      "kind": "currency"
+    },
+    {
+      "label": "Receita líquida grupo",
+      "value": 12413460.96,
+      "kind": "currency"
+    },
+    {
+      "label": "Lucro líquido estimado",
+      "value": -226352.4,
+      "kind": "currency"
+    }
+  ],
+  "bp": [
+    {
+      "Descrição": "ATIVO",
+      "Nível": 1,
+      "Origem/Conta": "ATIVO",
+      "Inplastic": 5563757.29,
+      "Taoplast": 3276289.8,
+      "Licitaplas": 504659.12,
+      "Plas Capital": 283078.44,
+      "Total Grupo": 9627784.649999999
+    },
+    {
+      "Descrição": "Ativo Circulante",
+      "Nível": 2,
+      "Origem/Conta": "ATIVO CIRCULANTE",
+      "Inplastic": 4190159.94,
+      "Taoplast": 1120601.39,
+      "Licitaplas": 504659.12,
+      "Plas Capital": 160480.08,
+      "Total Grupo": 5975900.53
+    },
+    {
+      "Descrição": "Disponível",
+      "Nível": 3,
+      "Origem/Conta": "DISPONÍVEL",
+      "Inplastic": 587842.62,
+      "Taoplast": 72283.11,
+      "Licitaplas": 101831.49,
+      "Plas Capital": 8679.38,
+      "Total Grupo": 770636.6
+    },
+    {
+      "Descrição": "Clientes / Duplicatas a Receber",
+      "Nível": 3,
+      "Origem/Conta": "CLIENTES",
+      "Inplastic": 274386.37,
+      "Taoplast": 465149.58,
+      "Licitaplas": 149661.41,
+      "Plas Capital": 32777.34,
+      "Total Grupo": 921974.7
+    },
+    {
+      "Descrição": "Outros Créditos",
+      "Nível": 3,
+      "Origem/Conta": "OUTROS CRÉDITOS",
+      "Inplastic": 891935.33,
+      "Taoplast": 100357.36,
+      "Licitaplas": 0,
+      "Plas Capital": 119023.36,
+      "Total Grupo": 1111316.05
+    },
+    {
+      "Descrição": "Estoques",
+      "Nível": 3,
+      "Origem/Conta": "ESTOQUE",
+      "Inplastic": 2435995.62,
+      "Taoplast": 482811.34,
+      "Licitaplas": 253166.22,
+      "Plas Capital": 0,
+      "Total Grupo": 3171973.18
+    },
+    {
+      "Descrição": "Despesas Pagas Antecipadas",
+      "Nível": 3,
+      "Origem/Conta": "DESPESAS PAGAS ANTECIPADAS",
+      "Inplastic": 0,
+      "Taoplast": 4721.97,
+      "Licitaplas": 0,
+      "Plas Capital": 0,
+      "Total Grupo": 4721.97
+    },
+    {
+      "Descrição": "Ativo Não Circulante",
+      "Nível": 2,
+      "Origem/Conta": "ATIVO NÃO-CIRCULANTE",
+      "Inplastic": 1373597.35,
+      "Taoplast": 2155688.41,
+      "Licitaplas": 0,
+      "Plas Capital": 122598.36,
+      "Total Grupo": 3651884.12
+    },
+    {
+      "Descrição": "Investimentos / Outros Créditos LP",
+      "Nível": 3,
+      "Origem/Conta": "OUTROS CRÉDITOS LP",
+      "Inplastic": 206573.14,
+      "Taoplast": 1993691.49,
+      "Licitaplas": 0,
+      "Plas Capital": 122598.36,
+      "Total Grupo": 2322862.99
+    },
+    {
+      "Descrição": "Imobilizado",
+      "Nível": 3,
+      "Origem/Conta": "IMOBILIZADO",
+      "Inplastic": 1151424.21,
+      "Taoplast": 161996.92,
+      "Licitaplas": 0,
+      "Plas Capital": 0,
+      "Total Grupo": 1313421.13
+    },
+    {
+      "Descrição": "Intangível",
+      "Nível": 3,
+      "Origem/Conta": "INTANGÍVEL",
+      "Inplastic": 0,
+      "Taoplast": 0,
+      "Licitaplas": 0,
+      "Plas Capital": 0,
+      "Total Grupo": 0
+    },
+    {
+      "Descrição": "PASSIVO TOTAL",
+      "Nível": 1,
+      "Origem/Conta": "PASSIVO",
+      "Inplastic": 5563757.29,
+      "Taoplast": 3276289.8,
+      "Licitaplas": 504659.12,
+      "Plas Capital": 283078.44,
+      "Total Grupo": 9627784.649999999
+    },
+    {
+      "Descrição": "Passivo Circulante",
+      "Nível": 2,
+      "Origem/Conta": "PASSIVO CIRCULANTE",
+      "Inplastic": 3034399.13,
+      "Taoplast": 165471.9,
+      "Licitaplas": 122212.18,
+      "Plas Capital": 98389.48,
+      "Total Grupo": 3420472.69
+    },
+    {
+      "Descrição": "Fornecedores",
+      "Nível": 3,
+      "Origem/Conta": "FORNECEDORES",
+      "Inplastic": 1442751.86,
+      "Taoplast": 59413.06,
+      "Licitaplas": 0,
+      "Plas Capital": 26768.08,
+      "Total Grupo": 1528933
+    },
+    {
+      "Descrição": "Obrigações Trabalhistas",
+      "Nível": 3,
+      "Origem/Conta": "OBRIGAÇÕES TRABALHISTAS",
+      "Inplastic": 0,
+      "Taoplast": 0,
+      "Licitaplas": 0,
+      "Plas Capital": 0,
+      "Total Grupo": 0
+    },
+    {
+      "Descrição": "Impostos e Contribuições a Recolher",
+      "Nível": 3,
+      "Origem/Conta": "IMPOSTOS E CONTRIBUIÇÕES A RECOLHER",
+      "Inplastic": 205.05,
+      "Taoplast": 84191.04,
+      "Licitaplas": 8351.57,
+      "Plas Capital": 1368.85,
+      "Total Grupo": 94116.51000000001
+    },
+    {
+      "Descrição": "Empréstimos e Financiamentos",
+      "Nível": 3,
+      "Origem/Conta": "EMPRÉSTIMOS E FINANCIAMENTOS",
+      "Inplastic": 50.01,
+      "Taoplast": 0,
+      "Licitaplas": 583.22,
+      "Plas Capital": 0,
+      "Total Grupo": 633.23
+    },
+    {
+      "Descrição": "Outras Obrigações / Adiantamentos",
+      "Nível": 3,
+      "Origem/Conta": "OUTRAS OBRIGAÇÕES",
+      "Inplastic": 1367155.18,
+      "Taoplast": 0,
+      "Licitaplas": 36891.87,
+      "Plas Capital": 70369.15000000001,
+      "Total Grupo": 1474416.2
+    },
+    {
+      "Descrição": "Passivo Não Circulante",
+      "Nível": 2,
+      "Origem/Conta": "PASSIVO NÃO-CIRCULANTE",
+      "Inplastic": 456252.44,
+      "Taoplast": 136381.73,
+      "Licitaplas": 0,
+      "Plas Capital": 67057.03,
+      "Total Grupo": 659691.2000000001
+    },
+    {
+      "Descrição": "PATRIMÔNIO LÍQUIDO",
+      "Nível": 1,
+      "Origem/Conta": "PATRIMÔNIO LÍQUIDO",
+      "Inplastic": 2073105.72,
+      "Taoplast": 2974436.17,
+      "Licitaplas": 382446.94,
+      "Plas Capital": 117631.93,
+      "Total Grupo": 5547620.76
+    },
+    {
+      "Descrição": "Capital Social",
+      "Nível": 3,
+      "Origem/Conta": "CAPITAL SOCIAL",
+      "Inplastic": 2000000,
+      "Taoplast": 10000,
+      "Licitaplas": 10000,
+      "Plas Capital": 120000,
+      "Total Grupo": 2140000
+    },
+    {
+      "Descrição": "Reservas / Lucros ou Prejuízos",
+      "Nível": 3,
+      "Origem/Conta": "LUCROS OU PREJUÍZOS",
+      "Inplastic": 146211.44,
+      "Taoplast": 2964436.17,
+      "Licitaplas": 744893.88,
+      "Plas Capital": 0,
+      "Total Grupo": 3855541.49
+    }
+  ],
+  "dre": [
+    {
+      "Descrição": "Receita Bruta",
+      "Nível": 2,
+      "Referência": "Balancete final sem encerramento",
+      "Inplastic": 4301352.33,
+      "Taoplast": 9143900.85,
+      "Licitaplas": 1497149.54,
+      "Plas Capital": 62006.27,
+      "Total Grupo": 15004408.99,
+      "% Receita Líquida Grupo": 1.208720842507084
+    },
+    {
+      "Descrição": "Deduções da Receita",
+      "Nível": 2,
+      "Referência": "Balancete final sem encerramento",
+      "Inplastic": -1243969.9,
+      "Taoplast": -1242337.76,
+      "Licitaplas": -129343.2,
+      "Plas Capital": 0,
+      "Total Grupo": -2615650.86,
+      "% Receita Líquida Grupo": -0.2107108459460608
+    },
+    {
+      "Descrição": "Receitas Financeiras/Diversas",
+      "Nível": 2,
+      "Referência": "Balancete final sem encerramento",
+      "Inplastic": 25647.7,
+      "Taoplast": 1782.34,
+      "Licitaplas": 75.98,
+      "Plas Capital": 80.09,
+      "Total Grupo": 27586.11,
+      "% Receita Líquida Grupo": 0.002222273875826488
+    },
+    {
+      "Descrição": "Receita Líquida / Resultado Receita",
+      "Nível": 1,
+      "Referência": "Balancete final sem encerramento",
+      "Inplastic": 3083030.13,
+      "Taoplast": 7903345.43,
+      "Licitaplas": 1367882.32,
+      "Plas Capital": 59203.08,
+      "Total Grupo": 12413460.96,
+      "% Receita Líquida Grupo": 1
+    },
+    {
+      "Descrição": "CMV / Custos",
+      "Nível": 2,
+      "Referência": "Balancete final sem encerramento",
+      "Inplastic": -3469199.04,
+      "Taoplast": -6440144.64,
+      "Licitaplas": -334976.72,
+      "Plas Capital": 0,
+      "Total Grupo": -10244320.4,
+      "% Receita Líquida Grupo": -0.8252590017409618
+    },
+    {
+      "Descrição": "Lucro Bruto",
+      "Nível": 1,
+      "Referência": "Balancete final sem encerramento",
+      "Inplastic": -386168.9100000001,
+      "Taoplast": 1463200.79,
+      "Licitaplas": 1032905.6,
+      "Plas Capital": 59203.08,
+      "Total Grupo": 2169140.56,
+      "% Receita Líquida Grupo": 0.1747409982590383
+    },
+    {
+      "Descrição": "Despesas Operacionais",
+      "Nível": 2,
+      "Referência": "Balancete final sem encerramento",
+      "Inplastic": -626972.8,
+      "Taoplast": -978698.2,
+      "Licitaplas": -730706.64,
+      "Plas Capital": -55741.23,
+      "Total Grupo": -2392118.87,
+      "% Receita Líquida Grupo": -0.1927036205058481
+    },
+    {
+      "Descrição": "  Despesas com Vendas",
+      "Nível": 3,
+      "Referência": "Balancete final sem encerramento",
+      "Inplastic": -9092.15,
+      "Taoplast": -52417.47,
+      "Licitaplas": -46220.07,
+      "Plas Capital": 0,
+      "Total Grupo": -107729.69,
+      "% Receita Líquida Grupo": -0.008678457228579387
+    },
+    {
+      "Descrição": "  Despesas Administrativas",
+      "Nível": 3,
+      "Referência": "Balancete final sem encerramento",
+      "Inplastic": -617880.65,
+      "Taoplast": -926280.73,
+      "Licitaplas": -684486.57,
+      "Plas Capital": -55741.23,
+      "Total Grupo": -2284389.18,
+      "% Receita Líquida Grupo": -0.1840251632772686
+    },
+    {
+      "Descrição": "  Despesas Financeiras",
+      "Nível": 3,
+      "Referência": "Balancete final sem encerramento",
+      "Inplastic": -172962.09,
+      "Taoplast": -371983.26,
+      "Licitaplas": -4327.45,
+      "Plas Capital": -1375.77,
+      "Total Grupo": -550648.57,
+      "% Receita Líquida Grupo": -0.04435898834131428
+    },
+    {
+      "Descrição": "EBITDA / Resultado Operacional",
+      "Nível": 1,
+      "Referência": "Balancete final sem encerramento",
+      "Inplastic": -1013141.71,
+      "Taoplast": 484502.5900000001,
+      "Licitaplas": 302198.9600000001,
+      "Plas Capital": 3461.849999999999,
+      "Total Grupo": -222978.31,
+      "% Receita Líquida Grupo": -0.01796262224680973
+    },
+    {
+      "Descrição": "Outras / IRPJ-CSLL / Não Operacionais",
+      "Nível": 2,
+      "Referência": "Balancete final sem encerramento",
+      "Inplastic": 0,
+      "Taoplast": 0,
+      "Licitaplas": 0,
+      "Plas Capital": -3374.09,
+      "Total Grupo": -3374.09,
+      "% Receita Líquida Grupo": -0.0002718089669651646
+    },
+    {
+      "Descrição": "Lucro Líquido estimado",
+      "Nível": 1,
+      "Referência": "Balancete final sem encerramento",
+      "Inplastic": -1013141.71,
+      "Taoplast": 484502.5900000001,
+      "Licitaplas": 302198.9600000001,
+      "Plas Capital": 87.7599999999984,
+      "Total Grupo": -226352.4,
+      "% Receita Líquida Grupo": -0.01823443121377489
+    }
+  ],
+  "inventory": [
+    {
+      "Empresa": "Inplastic",
+      "Tipo usado": "BP",
+      "Arquivo": "doc_6ec74b38c94f_Balancete de Verif FINAL ENC DEZ 2.025.pdf",
+      "Linhas extraídas": 243
+    },
+    {
+      "Empresa": "Inplastic",
+      "Tipo usado": "DRE",
+      "Arquivo": "doc_253bb9bbb155_Balancete de Verificação FINAL DEZ 2.025-8.pdf",
+      "Linhas extraídas": 243
+    },
+    {
+      "Empresa": "Taoplast",
+      "Tipo usado": "BP",
+      "Arquivo": "doc_4bd977cf3ac0_Balanc Verif FINAL ENC DEZ 2025.pdf",
+      "Linhas extraídas": 155
+    },
+    {
+      "Empresa": "Taoplast",
+      "Tipo usado": "DRE",
+      "Arquivo": "doc_271cb1330fe2_Balancete de Verif FINAL DEZ 2025-3.pdf",
+      "Linhas extraídas": 150
+    },
+    {
+      "Empresa": "Licitaplas",
+      "Tipo usado": "BP",
+      "Arquivo": "doc_cf2b045b4bee_Balancete Verif LICITAPLAST FINAL ENC Dez 2.025.pdf",
+      "Linhas extraídas": 119
+    },
+    {
+      "Empresa": "Licitaplas",
+      "Tipo usado": "DRE",
+      "Arquivo": "doc_682599e4dfd0_Balancete LICITAPLAST FINAL Dez 2.025-3.pdf",
+      "Linhas extraídas": 114
+    },
+    {
+      "Empresa": "Plas Capital",
+      "Tipo usado": "BP",
+      "Arquivo": "doc_998dc50d643b_Balancete de Verif ENCER DEZ 2.025.pdf",
+      "Linhas extraídas": 95
+    },
+    {
+      "Empresa": "Plas Capital",
+      "Tipo usado": "DRE",
+      "Arquivo": "doc_f8b6e3f3b54b_Balancete de Verif DEZ 2.025-1.pdf",
+      "Linhas extraídas": 85
+    }
+  ],
+  "validations": [
+    {
+      "Validação": "Ativo - Passivo",
+      "Inplastic": 0,
+      "Taoplast": 0,
+      "Licitaplas": 0,
+      "Plas Capital": 0,
+      "Total Grupo": 0,
+      "Observação": "Deve ser 0 ou próximo; sinais convertidos para apresentação."
+    },
+    {
+      "Validação": "Receita líquida grupo",
+      "Inplastic": null,
+      "Taoplast": null,
+      "Licitaplas": null,
+      "Plas Capital": null,
+      "Total Grupo": 12413460.96,
+      "Observação": "DRE antes do encerramento."
+    }
+  ],
+  "readme": [
+    {
+      "Grupo Inplastic — Balanço e DRE a partir dos balancetes": "Base recebida",
+      "Coluna 2": "PDFs de balancete dezembro/2025"
+    },
+    {
+      "Grupo Inplastic — Balanço e DRE a partir dos balancetes": "BP",
+      "Coluna 2": "Usa peças de fechamento/encerramento, conforme regra informada por Wagner."
+    },
+    {
+      "Grupo Inplastic — Balanço e DRE a partir dos balancetes": "DRE",
+      "Coluna 2": "Usa peças finais sem encerramento, para preservar receitas/despesas antes da zeragem."
+    },
+    {
+      "Grupo Inplastic — Balanço e DRE a partir dos balancetes": "Aviso",
+      "Coluna 2": "Extração automática de PDFs: revisar contas críticas antes de apresentação externa."
+    }
+  ]
+}
