@@ -1,0 +1,21 @@
+{
+  "name": "inplastic-kanban",
+  "version": "1.1.1",
+  "description": "Kanban interno InPlastic com Diretoria e Colaboradores",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed.js",
+    "create-user": "node scripts/create-user.js",
+    "check": "node --check server.js && node --check db.js && node --check seed.js && node --check public/app.js && node --check scripts/create-user.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.1",
+    "express-session": "^1.18.0",
+    "helmet": "^7.1.0"
+  }
+}

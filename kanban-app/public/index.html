@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanban interno</title>
+<link rel="stylesheet" href="style.css">
+<script>window.KANBAN_BASE_PATH = window.location.pathname.startsWith('/kanban') ? '/kanban' : '';</script>
+</head>
+<body>
+
+<!-- Tela de login -->
+<div id="login-screen" class="screen">
+  <form id="login-form" class="login-card">
+    <h1>Kanban interno</h1>
+    <label>Usuário
+      <input type="text" id="username" autocomplete="username" required>
+    </label>
+    <label>Senha
+      <input type="password" id="password" autocomplete="current-password" required>
+    </label>
+    <button type="submit">Entrar</button>
+    <p id="login-error" class="error"></p>
+  </form>
+</div>
+
+<!-- Tela do quadro -->
+<div id="app-screen" class="screen hidden">
+  <header class="topbar">
+    <div class="topbar-left">
+      <h1 id="board-title">Kanban</h1>
+      <nav id="board-switch"></nav>
+    </div>
+    <div class="topbar-right">
+      <span id="user-name"></span>
+      <button id="logout-btn" class="btn-ghost">Sair</button>
+    </div>
+  </header>
+
+  <main id="board" class="board"></main>
+</div>
+
+<!-- Modal de cartão -->
+<div id="card-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2 id="modal-title">Novo cartão</h2>
+    <form id="card-form">
+      <input type="hidden" id="card-id">
+      <input type="hidden" id="card-column-id">
+      <label>Título
+        <input type="text" id="card-title" required>
+      </label>
+      <label>Descrição
+        <textarea id="card-description" rows="3"></textarea>
+      </label>
+      <div class="row">
+        <label>Responsável
+          <input type="text" id="card-assignee">
+        </label>
+        <label>Prioridade
+          <select id="card-priority">
+            <option value="baixa">Baixa</option>
+            <option value="media" selected>Média</option>
+            <option value="alta">Alta</option>
+          </select>
+        </label>
+      </div>
+      <label>Prazo
+        <input type="date" id="card-due-date">
+      </label>
+      <div id="card-activity" class="activity-box hidden"></div>
+      <div class="modal-actions">
+        <button type="button" id="delete-card-btn" class="btn-danger hidden">Excluir</button>
+        <div class="modal-actions-right">
+          <button type="button" id="cancel-card-btn" class="btn-ghost">Cancelar</button>
+          <button type="submit" class="btn-primary">Salvar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
